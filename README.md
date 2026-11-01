@@ -11,7 +11,6 @@ npm run dev
 
 ## Add a game
 
-1. Put the game in `public/games/<folder>/`, with an `index.html` as its starting page.
-2. Add a line to `src/data/games.ts`.
+Add a line to `src/data/games.ts` with the game's title and address. A game published elsewhere uses its full address. A game hosted here goes in `public/games/<folder>/`, with an `index.html` as its starting page, and uses `games/<folder>/` as its address.
 
 Keep real photos and personal details out of this repo. It's public.

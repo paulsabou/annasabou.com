@@ -24,8 +24,8 @@ import { games } from '../data/games';
         <div class="games">
           {
             games.length > 0 ? (
-              games.map(({ title, folder }) => (
-                <a class="tile" href={`games/${folder}/`}>
+              games.map(({ title, url }) => (
+                <a class="tile" href={url}>
                   ♥ {title}
                 </a>
               ))
