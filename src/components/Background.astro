@@ -3,8 +3,8 @@ const hearts = [
   { top: '4%', left: '46%', size: 24, color: '#ff9fbd', tilt: 0 },
   { top: '26%', left: '7%', size: 34, color: '#ffb3d1', tilt: -14 },
   { top: '32%', right: '8%', size: 28, color: '#c9a8ff', tilt: 12 },
-  { top: '56%', left: '3%', size: 26, color: '#a8d4ff', tilt: 10 },
-  { top: '50%', right: '3%', size: 32, color: '#ff9fbd', tilt: -10 },
+  { top: '72%', left: '3%', size: 26, color: '#a8d4ff', tilt: 10 },
+  { top: '44%', right: '3%', size: 32, color: '#ff9fbd', tilt: -10 },
   { bottom: '20%', left: '28%', size: 20, color: '#ffc4dd', tilt: 0 },
 ];
 ---
@@ -116,7 +116,7 @@ const hearts = [
 
   .animal {
     bottom: 0;
-    width: clamp(64px, 12vw, 110px);
+    width: clamp(64px, min(12vw, 16vh), 110px);
   }
 
   .bunny {
@@ -125,11 +125,21 @@ const hearts = [
 
   .chick {
     left: 50%;
-    width: clamp(52px, 8vw, 76px);
+    width: clamp(52px, min(8vw, 11vh), 76px);
     transform: translateX(-50%);
   }
 
   .kitty {
     right: 4%;
+  }
+
+  @media (orientation: landscape) and (max-height: 520px) {
+    .rainbow {
+      width: 130px;
+    }
+
+    .rainbow-right {
+      top: 18px;
+    }
   }
 </style>
