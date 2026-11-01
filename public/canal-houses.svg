@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 200">
+  <defs>
+    <g id="window">
+      <rect width="14" height="18" rx="3" fill="#fff" stroke="#8f7a9e" stroke-width="1.5"/>
+      <path d="M7 0 V18 M0 9 H14" stroke="#8f7a9e" stroke-width="1"/>
+    </g>
+    <g id="door">
+      <path d="M0 26 V8 Q0 0 8 0 Q16 0 16 8 V26Z" fill="#9b7bb8" stroke="#7d5f99" stroke-width="1.5"/>
+      <circle cx="12" cy="14" r="1.5" fill="#fff0a8"/>
+    </g>
+  </defs>
+
+  <!-- Step gable -->
+  <path d="M4 176 V84 H14 V70 H24 V56 H34 V44 H50 V56 H60 V70 H70 V84 H80 V176Z" fill="#ffc9d6" stroke="#e79bb0" stroke-width="3" stroke-linejoin="round"/>
+  <use href="#window" x="35" y="60"/>
+  <use href="#window" x="17" y="92"/>
+  <use href="#window" x="53" y="92"/>
+  <use href="#window" x="17" y="146"/>
+  <use href="#door" x="50" y="150"/>
+  <circle cx="30" cy="122" r="2.5" fill="#4a3b4f"/>
+  <circle cx="54" cy="122" r="2.5" fill="#4a3b4f"/>
+  <path d="M38 127 Q42 131 46 127" fill="none" stroke="#4a3b4f" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="23" cy="129" rx="5" ry="3" fill="#ff9fb8"/>
+  <ellipse cx="61" cy="129" rx="5" ry="3" fill="#ff9fb8"/>
+
+  <!-- Neck gable -->
+  <path d="M80 176 V92 Q94 92 98 78 V50 L118 34 L138 50 V78 Q142 92 156 92 V176Z" fill="#bff0d4" stroke="#86d0a8" stroke-width="3" stroke-linejoin="round"/>
+  <use href="#window" x="111" y="56"/>
+  <use href="#window" x="93" y="100"/>
+  <use href="#window" x="129" y="100"/>
+  <use href="#window" x="93" y="136"/>
+  <use href="#door" x="126" y="150"/>
+
+  <!-- Bell gable -->
+  <path d="M156 176 V80 C156 62 176 66 176 48 C176 34 206 34 206 48 C206 66 226 62 226 80 V176Z" fill="#fff0a8" stroke="#ecd16f" stroke-width="3" stroke-linejoin="round"/>
+  <use href="#window" x="184" y="50"/>
+  <use href="#window" x="166" y="88"/>
+  <use href="#window" x="202" y="88"/>
+  <use href="#window" x="166" y="146"/>
+  <use href="#door" x="196" y="150"/>
+  <circle cx="178" cy="124" r="2.5" fill="#4a3b4f"/>
+  <circle cx="204" cy="124" r="2.5" fill="#4a3b4f"/>
+  <path d="M187 129 Q191 133 195 129" fill="none" stroke="#4a3b4f" stroke-width="2" stroke-linecap="round"/>
+  <ellipse cx="171" cy="131" rx="5" ry="3" fill="#ffc0a8"/>
+  <ellipse cx="211" cy="131" rx="5" ry="3" fill="#ffc0a8"/>
+
+  <!-- Spout gable -->
+  <path d="M226 176 V70 L263 28 L300 70 V176Z" fill="#c2defc" stroke="#90bdec" stroke-width="3" stroke-linejoin="round"/>
+  <use href="#window" x="256" y="56"/>
+  <use href="#window" x="238" y="88"/>
+  <use href="#window" x="274" y="88"/>
+  <use href="#window" x="238" y="122"/>
+  <use href="#window" x="274" y="122"/>
+  <use href="#door" x="255" y="150"/>
+
+  <!-- Step gable -->
+  <path d="M300 176 V76 H310 V62 H320 V48 H352 V62 H362 V76 H372 V176Z" fill="#e0ccff" stroke="#bfa2ea" stroke-width="3" stroke-linejoin="round"/>
+  <use href="#window" x="329" y="54"/>
+  <use href="#window" x="312" y="86"/>
+  <use href="#window" x="346" y="86"/>
+  <use href="#window" x="312" y="122"/>
+  <use href="#window" x="346" y="122"/>
+  <use href="#door" x="328" y="150"/>
+
+  <!-- Neck gable -->
+  <path d="M372 176 V96 Q386 96 390 82 V56 L408 42 L426 56 V82 Q430 96 444 96 V176Z" fill="#ffdcb5" stroke="#efb987" stroke-width="3" stroke-linejoin="round"/>
+  <use href="#window" x="401" y="60"/>
+  <use href="#window" x="384" y="104"/>
+  <use href="#window" x="418" y="104"/>
+  <use href="#window" x="384" y="138"/>
+  <use href="#door" x="416" y="150"/>
+
+  <!-- Quay and canal -->
+  <rect y="174" width="450" height="6" fill="#e8d3c4"/>
+  <rect y="180" width="450" height="20" fill="#bfe3f7"/>
+  <path d="M24 190 q8 -5 16 0 t16 0 M178 193 q8 -5 16 0 t16 0 M332 189 q8 -5 16 0 t16 0" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

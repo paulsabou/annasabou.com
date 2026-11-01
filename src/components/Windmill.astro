@@ -1,0 +1,56 @@
+---
+const { side } = Astro.props;
+---
+
+<svg class:list={['windmill', side]} viewBox="0 0 120 170">
+  <path d="M42 50 L34 170 H86 L78 50Z" fill="#ffe7c7" stroke="#e8bd8c" stroke-width="3" stroke-linejoin="round" />
+  <path d="M38 52 Q60 14 82 52Z" fill="#b5d8ff" stroke="#8fbbe8" stroke-width="3" stroke-linejoin="round" />
+  <rect x="30" y="112" width="60" height="6" rx="3" fill="#e8bd8c" />
+  <circle cx="60" cy="88" r="7" fill="#fff" stroke="#c9a06e" stroke-width="2" />
+  <path d="M50 170 V146 Q50 134 60 134 Q70 134 70 146 V170Z" fill="#ff9fb8" stroke="#e8809e" stroke-width="2" />
+  <g class="sails">
+    {
+      [0, 90, 180, 270].map((angle) => (
+        <g transform={`rotate(${angle} 60 50)`}>
+          <rect x="58" y="4" width="4" height="46" fill="#a98a6a" />
+          <rect x="62" y="6" width="13" height="38" rx="2" fill="#fff" stroke="#a98a6a" stroke-width="2" />
+          <path d="M62 16 H75 M62 25 H75 M62 34 H75" stroke="#d8c4ae" stroke-width="1.5" />
+        </g>
+      ))
+    }
+    <circle cx="60" cy="50" r="5" fill="#a98a6a" />
+  </g>
+</svg>
+
+<style>
+  .windmill {
+    position: absolute;
+    bottom: calc(var(--skyline) * 0.45);
+    width: clamp(56px, min(13vw, 12vh), 130px);
+  }
+
+  .left {
+    left: 15%;
+  }
+
+  .right {
+    right: 15%;
+  }
+
+  .sails {
+    transform-origin: 60px 50px;
+    animation: spin 24s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sails {
+      animation: none;
+    }
+  }
+</style>
