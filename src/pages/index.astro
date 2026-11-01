@@ -1,0 +1,97 @@
+---
+import Background from '../components/Background.astro';
+import Panda from '../components/Panda.astro';
+import { games } from '../data/games';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <title>Anna's Games</title>
+  </head>
+  <body>
+    <Background />
+    <main>
+      <Panda />
+      <h1>Hi, I'm Anna!</h1>
+      <p class="tagline">Come play my games ♥</p>
+      <div class="games">
+        {
+          games.length > 0 ? (
+            games.map(({ title, folder }) => (
+              <a class="tile" href={`games/${folder}/`}>
+                ♥ {title}
+              </a>
+            ))
+          ) : (
+            <p class="tile">Games coming soon ♥</p>
+          )
+        }
+      </div>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    background: linear-gradient(170deg, #ffe3ee 0%, #f2e6ff 50%, #e3f1ff 100%);
+    color: #5b3a6b;
+    font-family: 'Comic Sans MS', 'Chalkboard SE', system-ui, sans-serif;
+    text-align: center;
+  }
+</style>
+
+<style>
+  main {
+    position: relative;
+    padding: 56px 24px 150px;
+  }
+
+  h1 {
+    margin: 8px 0 4px;
+    font-size: clamp(32px, 7vw, 46px);
+  }
+
+  .tagline {
+    margin: 0 0 28px;
+    font-size: 19px;
+  }
+
+  .games {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .tile {
+    margin: 0;
+    padding: 28px 10px;
+    border-radius: 22px;
+    background: #fff;
+    box-shadow: 0 5px 0 #f6b9cf;
+    color: inherit;
+    font-size: 18px;
+    text-decoration: none;
+  }
+
+  a.tile:hover {
+    transform: translateY(-3px);
+  }
+
+  a.tile:nth-child(even) {
+    box-shadow: 0 5px 0 #b9d6f6;
+  }
+</style>
