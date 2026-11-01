@@ -16,7 +16,14 @@
 
 <style>
   .panda {
-    width: 170px;
-    height: 170px;
+    flex-shrink: 0;
+    width: clamp(96px, min(32vw, 26vh), 240px);
+    aspect-ratio: 1;
+  }
+
+  @media (orientation: landscape) and (max-height: 520px) {
+    .panda {
+      width: 38vh;
+    }
   }
 </style>
