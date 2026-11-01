@@ -1,11 +1,13 @@
 ---
+import Windmill from './Windmill.astro';
+
 const hearts = [
   { top: '4%', left: '46%', size: 24, color: '#ff9fbd', tilt: 0 },
   { top: '26%', left: '7%', size: 34, color: '#ffb3d1', tilt: -14 },
   { top: '32%', right: '8%', size: 28, color: '#c9a8ff', tilt: 12 },
   { top: '72%', left: '3%', size: 26, color: '#a8d4ff', tilt: 10 },
   { top: '44%', right: '3%', size: 32, color: '#ff9fbd', tilt: -10 },
-  { bottom: '20%', left: '28%', size: 20, color: '#ffc4dd', tilt: 0 },
+  { top: '62%', left: '36%', size: 20, color: '#ffc4dd', tilt: 0 },
 ];
 ---
 
@@ -30,6 +32,19 @@ const hearts = [
       </svg>
     ))
   }
+
+  <Windmill side="left" />
+  <Windmill side="right" />
+
+  <svg class="flag" viewBox="0 0 100 100" role="img" aria-label="Dutch flag">
+    <rect x="8" y="4" width="5" height="96" rx="2" fill="#a98a6a" />
+    <circle cx="10.5" cy="5" r="5" fill="#ffd66e" />
+    <path d="M13 10 C35 2 60 18 92 10 V24 C60 32 35 16 13 24Z" fill="#d6323f" />
+    <path d="M13 24 C35 16 60 32 92 24 V38 C60 46 35 30 13 38Z" fill="#fff" />
+    <path d="M13 38 C35 30 60 46 92 38 V52 C60 60 35 44 13 52Z" fill="#2f5fa8" />
+  </svg>
+
+  <div class="canal-houses"></div>
 
   <svg class="animal bunny" viewBox="0 0 100 120">
     <ellipse cx="34" cy="32" rx="11" ry="30" fill="#fff" stroke="#e9a9bd" stroke-width="3" />
@@ -89,8 +104,26 @@ const hearts = [
   .background {
     position: absolute;
     inset: 0;
+    --skyline: clamp(90px, 18vh, 170px);
     overflow: hidden;
     pointer-events: none;
+  }
+
+  .canal-houses {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: var(--skyline);
+    background: url('/canal-houses.svg') center bottom / auto 100% repeat-x;
+  }
+
+  .flag {
+    position: absolute;
+    bottom: calc(var(--skyline) * 0.6);
+    left: 50%;
+    width: clamp(48px, min(8vw, 9vh), 84px);
+    transform: translateX(-50%);
   }
 
   .rainbow,
@@ -115,7 +148,7 @@ const hearts = [
   }
 
   .animal {
-    bottom: 0;
+    bottom: calc(var(--skyline) * 0.08);
     width: clamp(64px, min(12vw, 16vh), 110px);
   }
 
@@ -134,6 +167,10 @@ const hearts = [
   }
 
   @media (orientation: landscape) and (max-height: 520px) {
+    .background {
+      --skyline: 64px;
+    }
+
     .rainbow {
       width: 130px;
     }
