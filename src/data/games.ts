@@ -1,3 +1,4 @@
-// To add a game: put it in public/games/<folder>/ with an index.html, then add a line here.
-// Example: { title: 'Panda Jump', folder: 'panda-jump' },
-export const games: { title: string; folder: string }[] = [];
+// To add a game: add a line here. A game hosted on this site lives in public/games/<folder>/ and uses 'games/<folder>/' as its url.
+export const games: { title: string; url: string }[] = [
+  { title: 'Panda Life', url: 'https://paulsabou.github.io/panda-life/' },
+];
